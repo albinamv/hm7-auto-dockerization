@@ -1,12 +1,7 @@
-version: '3.1'
+version: '3.7'
 services:
-  postgres:
-    image: postgres
+  docker-app:
+    build: .
+    image: docker-app:1.1
     ports:
-      - '5432:5432'
-    volumes:
-      - ./data:/var/lib/postgres/data
-    environment:
-      - POSTGRES_DB=app
-      - POSTGRES_USER=app
-      - POSTGRES_PASSWORD=9mREsvXDs9Gk89Ef
+      - '9999:9999'
